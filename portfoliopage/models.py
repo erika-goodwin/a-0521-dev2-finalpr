@@ -1,4 +1,5 @@
 from django.db import models
+# from embed_video.fields import EmbedVideoField
 
 # Create your models here.
 class Tag(models.Model):
@@ -6,7 +7,7 @@ class Tag(models.Model):
 
 
     def __str__(self):
-        return self.headline
+        return self.name
 
 class TravelingPost(models.Model):
     headline = models.CharField(max_length=200)
@@ -17,6 +18,7 @@ class TravelingPost(models.Model):
     active = models.BooleanField(default=False)
     featured = models.BooleanField(default=False)
     tags= models.ManyToManyField(Tag, null=True)
+    # youtubeVideo = EmbedVideoField()  # same like models.URLField()
     # slug = 
 
     def __str__(self):

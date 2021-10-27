@@ -17,16 +17,15 @@
   transition: all 0.4s;
 }
 
-.showlater {
+/* .showlater {
   display: none;
-}
+} */
 
-.addingtest {
+/* .addingtest {
   background-color: yellow;
-}
+} */
 
 /* for toggle behavior */
-
 #sidebar.active {
   margin-left: -17rem;
 }
