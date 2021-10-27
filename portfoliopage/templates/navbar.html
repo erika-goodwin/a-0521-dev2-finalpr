@@ -1,0 +1,78 @@
+{% load static %}
+<!-- Vertical navbar -->
+<div class="vertical-nav bg-white" id="sidebar">
+  <div class="py-4 px-3 mb-4 bg-light">
+    <div class="media d-flex align-items-center">
+      <div class="media-body">
+        <h4 class="m-0">Erika Hashizume</h4>
+        <!-- <p class="font-weight-light text-muted mb-0">Yoga/workout addicts</p> -->
+      </div>
+    </div>
+  </div>
+
+  <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">
+    Work
+  </p>
+
+  <ul class="nav flex-column bg-white mb-0">
+    <li class="nav-item">
+      <a
+        href="{% url 'home'  %}"
+        class="nav-link text-dark font-italic bg-light"
+      >
+        Home
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        href="{% url 'about'  %}"
+        class="nav-link text-dark font-italic click-about"
+      >
+        About
+      </a>
+      <div class="showlater d-none">
+        <ul>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-dark font-italic"> Project </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-dark font-italic"> Resume </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <!-- <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic"> Project </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic"> Resume </a>
+    </li> -->
+  </ul>
+
+  <p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">
+    Hobby
+  </p>
+
+  <ul class="nav flex-column bg-white mb-0">
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic"> Yoga/Workout </a>
+    </li>
+    <li class="nav-item">
+      <a
+        href="{% url 'snowboarding'  %}"
+        class="nav-link text-dark font-italic"
+      >
+        Snowboarding
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic"> Singing/playing </a>
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'traveling'  %}" class="nav-link text-dark font-italic">
+        Traveling
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- End vertical navbar -->
