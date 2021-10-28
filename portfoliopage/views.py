@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import TravelingPost
 
 # Create your views here.
 
@@ -13,4 +14,6 @@ def snowboarding(request):
     return render(request, 'snowboarding.html')
 
 def traveling(request):
-    return render(request, 'traveling.html')
+    travelPostObj = TravelingPost.objects.all()
+    context = { 'posts': travelPostObj}
+    return render(request, 'traveling.html', context)

@@ -1,3 +1,7 @@
+.\? {
+  box-shadow: inset 4px 4px rgb(236, 15, 170), inset -4px -4px rgb(236, 15, 170);
+}
+
 /*
 *
 * ==========================================
@@ -17,13 +21,9 @@
   transition: all 0.4s;
 }
 
-/* .showlater {
+.subnav-about {
   display: none;
-} */
-
-/* .addingtest {
-  background-color: yellow;
-} */
+}
 
 /* for toggle behavior */
 #sidebar.active {
@@ -71,10 +71,15 @@
   }
 }
 
+/* This doesn't wotk why????  */
+/* .pwrap {
+  word-wrap: break-word;
+} */
+
 /* 
 *
 * ==========================================
-* FOR DEMO PURPOSE
+* Body
 * ==========================================
 *
 */

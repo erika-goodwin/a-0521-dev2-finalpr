@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'portfoliopage', 
-    # 'embed_video'
+    'embed_video'
 ]
 
 MIDDLEWARE = [

@@ -27,7 +27,8 @@ $(function () {
 //   false
 // );
 
-$(".click-about").click(function () {
-  alert("Handler for .click() called.");
-  // $(".showcase").removeClass("myClass noClass").addClass("yourClass");
+$(".js-nav_item_link").each(function () {
+  $(this).on("click", function () {
+    $("+.subnav-about", this).slideToggle();
+  });
 });

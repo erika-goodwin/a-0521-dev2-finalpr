@@ -1,62 +1,92 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% load static %}{% block content %}{% load
+embed_video_tags %}
 
 <!-- Page content holder -->
 <div class="page-content p-5" id="content">
   <!-- Toggle button -->
-  <button
+  <!-- <button
     id="sidebarCollapse"
     type="button"
     class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"
   >
     <i class="fa fa-bars mr-2"></i
     ><small class="text-uppercase font-weight-bold">Toggle</small>
-  </button>
+  </button> -->
 
   <!-- content -->
-  <h2 class="display-4 text-black">Snowboarding</h2>
+  <h2 class="display-4 text-black">Traveling</h2>
   <p class="lead text-black mb-0">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatum sed
     id libero debitis ducimus
   </p>
   <p class="lead text-black">///////</p>
   <div class="separator"></div>
-  <div class="row text-center text-lg-start">
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
+  <div class="row text-center text-lg-start justify-content-around wrapcss">
+    {% for post in posts %}
+    <div class="col-lg-6 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 text-center">
         <img
           class="img-fluid img-thumbnail"
           src="https://source.unsplash.com/pWkk7iiCoDM/400x300"
           alt=""
         />
       </a>
+
+      <h3>{{post.headline}}</h3>
+      <p>{{post.sub_headline}}</p>
+      <p class="" style="word-wrap: break-word">{{post.body}}</p>
+      <p></p>
     </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
+    {% endfor %}
+    <!-- 
+    <div class="col-lg-6 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 text-center">
         <img
           class="img-fluid img-thumbnail"
           src="https://source.unsplash.com/aob0ukAYfuI/400x300"
           alt=""
         />
       </a>
+      <h3>Title is here</h3>
+      <p>sub headline is here</p>
+      <p>
+        body - Lorem ipsum dolor sit amet consectetur adipisicing elit. Id et
+        possimus amet. Ratione enim molestias ex nulla placeat facere sed
+        expedita sit culpa dicta! Vero delectus veniam dolorum vel tempore.
+      </p>
     </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
+    <div class="col-lg-6 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 text-center">
         <img
           class="img-fluid img-thumbnail"
           src="https://source.unsplash.com/EUfxH-pze7s/400x300"
           alt=""
         />
       </a>
+      <h3>Title is here</h3>
+      <p>sub headline is here</p>
+      <p>
+        body - Lorem ipsum dolor sit amet consectetur adipisicing elit. Id et
+        possimus amet. Ratione enim molestias ex nulla placeat facere sed
+        expedita sit culpa dicta! Vero delectus veniam dolorum vel tempore.
+      </p>
     </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
+    <div class="col-lg-6 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 text-center">
         <img
           class="img-fluid img-thumbnail"
           src="https://source.unsplash.com/M185_qYH8vg/400x300"
           alt=""
         />
       </a>
-    </div>
+      <h3>Title is here</h3>
+      <p>sub headline is here</p>
+      <p>
+        body - Lorem ipsum dolor sit amet consectetur adipisicing elit. Id et
+        possimus amet. Ratione enim molestias ex nulla placeat facere sed
+        expedita sit culpa dicta! Vero delectus veniam dolorum vel tempore.
+      </p>
+    </div> -->
     <div class="col-lg-3 col-md-4 col-6">
       <a href="#" class="d-block mb-4 h-100">
         <img
