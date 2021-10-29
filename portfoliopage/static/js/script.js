@@ -1,34 +1,18 @@
 // Navbar
-$(function () {
-  // Sidebar toggle behavior
-  $("#sidebarCollapse").on("click", function () {
-    $("#sidebar, #content").toggleClass("active");
+// $(function () {
+//Navbar-accordion
+
+$(document).ready(function () {
+  console.log("Hi");
+  $(".js-nav_item_link").each(function () {
+    $(this).on("click", function () {
+      $("+.subnav-about", this).slideToggle();
+
+      return false;
+    });
   });
 });
 
-// Showlater navbar
-// let clickingShowText = document.getElementsByClassName("showlater");
+// });
 
-// console.log(click);
-
-// let changeDisplaySetting = (el) => {
-//   if (el.style.display == "none") {
-//     el.style.display == "block";
-//   } else {
-//     el.style.display == "none";
-//   }
-// };
-
-// clickingShowText.addEventListener(
-//   "click",
-//   () => {
-//     changeDisplaySetting(clickingShowText);
-//   },
-//   false
-// );
-
-$(".js-nav_item_link").each(function () {
-  $(this).on("click", function () {
-    $("+.subnav-about", this).slideToggle();
-  });
-});
+//    <!-- {% video item.video 'small' %} -->

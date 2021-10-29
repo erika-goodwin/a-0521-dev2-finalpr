@@ -104,3 +104,31 @@ body {
 .text-gray {
   color: #aaa;
 }
+
+/* 
+*
+* ==========================================
+* Picture box
+* ==========================================
+*
+*/
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.width400 {
+  width: 400px;
+  /* height: 300px; */
+}
+
+.heightcalc {
+  height: calc(400px * (3 / 4));
+}
+
+.cast_object_fit {
+  width: 100%;
+  height: calc(400px * (3 / 4));
+  object-fit: cover;
+}

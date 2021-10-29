@@ -1,40 +1,31 @@
-{% extends 'base.html' %} {% load static %}{% block content %}{% load
-embed_video_tags %}
+{% extends 'base.html' %} {% load static %}{% load embed_video_tags %}
+<!--  -->
+{% block content %}
 
 <!-- Page content holder -->
 <div class="page-content p-5" id="content">
-  <!-- Toggle button -->
-  <!-- <button
-    id="sidebarCollapse"
-    type="button"
-    class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"
-  >
-    <i class="fa fa-bars mr-2"></i
-    ><small class="text-uppercase font-weight-bold">Toggle</small>
-  </button> -->
-
   <!-- content -->
   <h2 class="display-4 text-black">Traveling</h2>
   <p class="lead text-black mb-0">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatum sed
-    id libero debitis ducimus
+    “In the end, we only regret the chances we didn’t take”
   </p>
-  <p class="lead text-black">///////</p>
+  <p class="lead text-black"></p>
   <div class="separator"></div>
-  <div class="row text-center text-lg-start justify-content-around wrapcss">
+  <div class="row text-center text-lg-start justify-content-start wrapcss">
     {% for post in posts %}
     <div class="col-lg-6 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 text-center">
+      <!-- <a href="#" class="d-block mb-4 text-center">
         <img
           class="img-fluid img-thumbnail"
           src="https://source.unsplash.com/pWkk7iiCoDM/400x300"
           alt=""
         />
-      </a>
+      </a> -->
 
-      <h3>{{post.headline}}</h3>
+      {% video post.youtubevideo 'small' %}
+      <h3 class="pt-2">{{post.headline}}</h3>
       <p>{{post.sub_headline}}</p>
-      <p class="" style="word-wrap: break-word">{{post.body}}</p>
+      <p class="" style="overflow-wrap: break-word">{{post.body |safe}}</p>
       <p></p>
     </div>
     {% endfor %}
@@ -87,80 +78,91 @@ embed_video_tags %}
         expedita sit culpa dicta! Vero delectus veniam dolorum vel tempore.
       </p>
     </div> -->
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
-        <img
-          class="img-fluid img-thumbnail"
-          src="https://source.unsplash.com/sesveuG_rNo/400x300"
-          alt=""
-        />
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
-        <img
-          class="img-fluid img-thumbnail"
-          src="https://source.unsplash.com/AvhMzHwiE_0/400x300"
-          alt=""
-        />
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
-        <img
-          class="img-fluid img-thumbnail"
-          src="https://source.unsplash.com/2gYsZUmockw/400x300"
-          alt=""
-        />
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
-        <img
-          class="img-fluid img-thumbnail"
-          src="https://source.unsplash.com/EMSDtjVHdQ8/400x300"
-          alt=""
-        />
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
-        <img
-          class="img-fluid img-thumbnail"
-          src="https://source.unsplash.com/8mUEy0ABdNE/400x300"
-          alt=""
-        />
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
-        <img
-          class="img-fluid img-thumbnail"
-          src="https://source.unsplash.com/G9Rfc1qccH4/400x300"
-          alt=""
-        />
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
-        <img
-          class="img-fluid img-thumbnail"
-          src="https://source.unsplash.com/aJeH0KcFkuc/400x300"
-          alt=""
-        />
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
-        <img
-          class="img-fluid img-thumbnail"
-          src="https://source.unsplash.com/p2TQ-3Bh3Oo/400x300"
-          alt=""
-        />
-      </a>
+
+    <div
+      class="
+        featurebox
+        row
+        text-center text-lg-start
+        justify-content-around
+        wrapcss
+      "
+    >
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="#" class="d-block mb-4 h-100">
+          <img
+            class="img-fluid img-thumbnail"
+            src="https://source.unsplash.com/sesveuG_rNo/400x300"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="#" class="d-block mb-4 h-100">
+          <img
+            class="img-fluid img-thumbnail"
+            src="https://source.unsplash.com/AvhMzHwiE_0/400x300"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="#" class="d-block mb-4 h-100">
+          <img
+            class="img-fluid img-thumbnail"
+            src="https://source.unsplash.com/2gYsZUmockw/400x300"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="#" class="d-block mb-4 h-100">
+          <img
+            class="img-fluid img-thumbnail"
+            src="https://source.unsplash.com/EMSDtjVHdQ8/400x300"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="#" class="d-block mb-4 h-100">
+          <img
+            class="img-fluid img-thumbnail"
+            src="https://source.unsplash.com/8mUEy0ABdNE/400x300"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="#" class="d-block mb-4 h-100">
+          <img
+            class="img-fluid img-thumbnail"
+            src="https://source.unsplash.com/G9Rfc1qccH4/400x300"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="#" class="d-block mb-4 h-100">
+          <img
+            class="img-fluid img-thumbnail"
+            src="https://source.unsplash.com/aJeH0KcFkuc/400x300"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="#" class="d-block mb-4 h-100">
+          <img
+            class="img-fluid img-thumbnail"
+            src="https://source.unsplash.com/p2TQ-3Bh3Oo/400x300"
+            alt=""
+          />
+        </a>
+      </div>
     </div>
   </div>
 </div>
 <!-- End demo content -->
 
-{% endblock content %}
+{% endblock %}

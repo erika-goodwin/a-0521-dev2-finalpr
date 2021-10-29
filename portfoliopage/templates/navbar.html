@@ -27,21 +27,24 @@
       <a
         href="{% url 'about'  %}"
         class="nav-link text-dark font-italic js-nav_item_link"
+        id="js-nav_item_lin"
       >
         About
       </a>
-      <div class="subnav-about">
-        <ul class="list-unstyled ps-4">
-          <li class="nav-item">
-            <a href="#" class="nav-link font-italic text-secondary">
-              Project
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link font-italic text-secondary"> Resume </a>
-          </li>
-        </ul>
-      </div>
+
+      <ul class="list-unstyled ps-4 subnav-about" 　>
+        <li class="nav-item">
+          <a href="#" class="nav-link font-italic text-secondary"> Project </a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://drive.google.com/file/d/14B0wLuIQypGP4StUd_eC9_xYhhu6Rcax/view?usp=sharing"
+            class="nav-link font-italic text-secondary"
+          >
+            Resume
+          </a>
+        </li>
+      </ul>
     </li>
     <!-- <li class="nav-item">
       <a href="#" class="nav-link text-dark font-italic"> Project </a>
@@ -68,12 +71,12 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="#" class="nav-link text-dark font-italic"> Singing/playing </a>
-    </li>
-    <li class="nav-item">
       <a href="{% url 'traveling'  %}" class="nav-link text-dark font-italic">
         Traveling
       </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic"> Singing/playing </a>
     </li>
   </ul>
 </div>
