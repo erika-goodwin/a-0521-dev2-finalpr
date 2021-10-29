@@ -1,3 +1,2 @@
-process type : command
-web: gunicorn portofolio : app
 
+web: gunicorn portofolio.wsgi --log-file -
