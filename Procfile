@@ -1,1 +1,3 @@
-web: gunicorn portofolio.wsgi
+process type : command
+web: gunicorn portofolio : app
+
