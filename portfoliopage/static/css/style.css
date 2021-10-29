@@ -114,18 +114,19 @@ body {
 */
 
 .grid4 {
+  width: calc(100% - 17rem);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
 .width400 {
-  width: 400px;
+  width: 100%;
   /* height: 300px; */
 }
 
-.heightcalc {
+/* .heightcalc {
   height: calc(400px * (3 / 4));
-}
+} */
 
 .cast_object_fit {
   width: 100%;
